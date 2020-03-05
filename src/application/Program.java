@@ -13,13 +13,15 @@ import chess.chessExeption;
 public class Program {
 
 	public static void main(String[] args) {
+		//Para inicializar esse projeto usar o terminal git java application/Program
+
 
 		Scanner sc = new Scanner(System.in);
 		ChessMatch chessMath = new ChessMatch();
 		List<ChessPiece> captured = new ArrayList<>();
 
-		while (true) {
-			try {
+		while(true) {
+			   try {
 					UI.clearScreen();
 					UI.printMatch(chessMath, captured);
 					System.out.println();
@@ -38,10 +40,9 @@ public class Program {
 					if(capturedPiece != null) {
 						captured.add(capturedPiece);
 					}
-					
 			}
-			
-			
+					
+			  
 			catch(chessExeption e) {
 				System.out.println(e.getMessage());
 				sc.nextLine();
@@ -55,7 +56,9 @@ public class Program {
 				
 			}
 		}
-
 	}
-
 }
+
+	
+  
+
